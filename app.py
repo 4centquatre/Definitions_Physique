@@ -83,13 +83,13 @@ if st.session_state.step == "question":
     while tab_indices[i] in st.session_state.questions.keys():
         i = randint(0, len(tab_indices) - 1)
     indice = tab_indices[i]
-    st.session_state.indice = 0
+    st.session_state.indice = indice
     st.session_state.step = "reponse"
     st.rerun()
 
 if st.session_state.step == "reponse":
     indice2 = randint(0,len(st.session_state.dico[st.session_state.indice])-1)
-    st.session_state.indice2 = indice2
+    st.session_state.indice2 = 0
     question = st.session_state.dico[st.session_state.indice][st.session_state.indice2]
     st.session_state.questions[st.session_state.indice] = question
     st.write("Question : "+question)
