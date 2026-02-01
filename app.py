@@ -69,7 +69,7 @@ if "indice" not in st.session_state:
 if "indice2" not in st.session_state:
     st.session_state.current = None
 
-st.title("Quiz Définitions")
+st.title("Quiz Définitions Physique")
 
 if st.session_state.step == "question":
     st.session_state.reponse = ""
